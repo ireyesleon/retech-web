@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/cliniia/static/css/main.087b0e30.css",
+    "main.js": "/cliniia/static/js/main.ec8ed962.js",
+    "static/media/demo.mp4": "/cliniia/static/media/demo.65c96283bb50739ccd0c.mp4",
+    "static/media/clinIA.png": "/cliniia/static/media/clinIA.dd5eb3c17bd012967b30.png",
+    "static/media/centro-salud.jpg": "/cliniia/static/media/centro-salud.97ef0b4d254397172a6b.jpg",
+    "static/media/bootstrap-icons.woff?": "/cliniia/static/media/bootstrap-icons.1295669cd4e305c97f2c.woff",
+    "static/media/diagnostico.png": "/cliniia/static/media/diagnostico.5bcc0bfa9544e4908f6b.png",
+    "static/media/bootstrap-icons.woff2?": "/cliniia/static/media/bootstrap-icons.92ea18a81d737146ff04.woff2",
+    "static/media/medicos.jpg": "/cliniia/static/media/medicos.93995085ca5f6a04ba61.jpg",
+    "index.html": "/cliniia/index.html",
+    "main.087b0e30.css.map": "/cliniia/static/css/main.087b0e30.css.map",
+    "main.ec8ed962.js.map": "/cliniia/static/js/main.ec8ed962.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.087b0e30.css",
+    "static/js/main.ec8ed962.js"
+  ]
+}

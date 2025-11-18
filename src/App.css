@@ -1,0 +1,216 @@
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f4f3ee;
+    min-height: 10vh;
+    padding: 0 20px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+
+/* Logo */
+#logo-pic {
+    width: 180px;
+    height: 160px;
+    object-fit: contain;
+}
+
+/* Fondo consistente */
+.main {
+    background-color: #f4f3ee;
+    min-height: 76vh;
+    width: 100%;
+    margin: 0;
+}
+
+/* Nav list */
+#nav-options {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    font-size: 2vh;
+    font-weight: bolder;
+}
+
+/* Nav links */
+#nav-options a {
+    text-decoration: none;
+    color: black;
+    padding: 5px 8px;
+    transition: all 0.3s ease;
+    border-bottom: 2px solid transparent;
+}
+
+/* Hover */
+#nav-options a:hover {
+    color: #508380;
+    border-bottom: 2px solid #508380;
+    cursor: pointer;
+}
+
+/* Active link */
+#nav-options a.active {
+    color: #508380;
+    border-bottom: 2px solid #508380;
+}
+
+
+.footer {
+    background-color: #508380;
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    bottom: 0;
+    padding: 0;
+}
+
+.footer ul {
+    list-style: none;
+    display: flex;
+    gap: 30px; /* separación entre enlaces */
+    margin: 0;
+    padding: 0;
+}
+
+.footer ul li {
+    display: inline;
+}
+
+.footer ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 5px; /* espacio entre ícono y texto */
+    transition: color 0.3s ease;
+}
+
+.footer ul li a:hover {
+    color: #f67280;
+    cursor: pointer;
+}
+
+/* Responsive: en móviles, enlaces en columna */
+@media (max-width: 768px) {
+    .footer ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+
+/* Imagen del About */
+.about-img {
+    width: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.about-img:hover {
+    transform: scale(1.02);
+}
+
+/* Texto del About */
+.about-text {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+.about-text p {
+    margin-bottom: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .about-text {
+        text-align: center;
+    }
+}
+
+#nav-options {
+    font-size: 2vh;
+    font-weight: bolder;
+}
+
+.title {
+    font-size: 4vh;
+}
+
+
+.icon {
+    color: white;
+}
+
+@media (max-width: 390px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.resume {
+    color: #f67280;
+    font-weight: bolder;
+}
+
+.resume:hover {
+    color: #6c5b7c;
+}
+
+.icon:hover {
+    color: #f67280;
+}
+
+.servicios {
+    background-color: #f4f3ee;
+}
+
+/* Animación fade-in para todos los componentes que lo usen */
+.fade-in {
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Contact Form Styles */
+.contact-form {
+  max-width: 600px; /* para que no se vea muy ancho en pantallas grandes */
+  width: 90%;       /* se adapta a móviles */
+  margin: 0 auto;   /* centrado horizontal */
+  padding: 2rem;    /* espacio interno consistente */
+}
+
+/* Inputs y textarea se ven iguales a la landing */
+.contact-form .form-control {
+  border-radius: 0.5rem;
+}
+
+/* Botón centrado y estilo landing */
+.contact-form .btn {
+  border-radius: 50px;
+}
+
+/* Ajustes responsive extra */
+@media (max-width: 768px) {
+  .contact-form {
+    padding: 1.5rem;
+  }
+}
