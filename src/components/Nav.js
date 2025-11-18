@@ -1,79 +1,62 @@
 import React from 'react';
 import { NavLink } from "react-router-dom";
-import { FaShoppingCart, FaUser, FaSearch } from "react-icons/fa";
+import { FaUser, FaBoxOpen, FaQuestionCircle, FaSearch } from "react-icons/fa";
 
 const Nav = () => {
   return (
-    <nav className="navbar navbar-expand-lg shadow-sm px-3 py-2 bg-light">
-      
-      {/* Logo */}
-      <NavLink className="navbar-brand d-flex align-items-center" to="/">
-        <img
-          id="logo-pic"
-          src={require('../assets/images/clinIA.png')}
-          alt="logo"
-          style={{ width: "120px", height: "auto" }}
-        />
-      </NavLink>
+    <nav className="navbar navbar-expand-lg shadow-sm px-3 py-2 d-flex align-items-center"
+  style={{
+    background: "linear-gradient(90deg, #0C5A5A 0%, #1A7A76 50%, #4BA09A 100%)"
+  }}>
 
-      {/* Search bar centrada */}
-      <div className="d-none d-lg-flex flex-grow-1 mx-4">
-        <div className="input-group">
-          <input
-            type="text"
-            className="form-control search-input"
-            placeholder="Buscar smartphones, laptops, tablets..."
-          />
-          <button className="btn btn-warning">
-            <FaSearch size={18} />
-          </button>
-        </div>
-      </div>
+  {/* Logo izquierda */}
+  <NavLink className="navbar-brand d-flex align-items-center me-4" to="/">
+    <img
+      id="logo-pic"
+      src={require('../assets/images/retech-logo.png')}
+      alt="logo"
+      style={{ width: "120px", height: "auto", borderRadius: "10px"}}
+    />
+  </NavLink>
 
-      {/* Iconos lado derecho */}
-      <div className="d-flex align-items-center gap-3">
-        <NavLink to="/account" className="nav-icon">
-          <FaUser size={20} />
-        </NavLink>
+  {/* Search bar CENTRADA */}
+  <div className="flex-grow-1 d-none d-lg-flex justify-content-center">
+    <div className="input-group" style={{ maxWidth: "450px", width: "100%" }}>
+      <input
+        type="text"
+        className="form-control search-input"
+        placeholder="Buscar smartphones, laptops, tablets..."
+      />
+      <button className="btn btn-warning">
+        <FaSearch size={18} />
+      </button>
+    </div>
+  </div>
 
-        <NavLink to="/cart" className="nav-icon position-relative">
-          <FaShoppingCart size={20} />
-        </NavLink>
+  {/* Opciones DERECHA */}
+  <div className="d-flex align-items-center gap-4 ms-auto">
 
-        {/* Hamburger */}
-        <button
-          className="navbar-toggler ms-2"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
-      </div>
+    {/* Mi cuenta */}
+    <NavLink to="/account" className="text-dark text-decoration-none d-flex align-items-center gap-2 nav-icon">
+      <FaUser size={20} />
+      <span className="d-none d-md-inline">Mi cuenta</span>
+    </NavLink>
 
-      {/* Menú inferior de categorías */}
-      <div className="collapse navbar-collapse mt-2" id="navbarNav">
-        <ul className="navbar-nav mx-auto" id="nav-options">
+    {/* Mis compras */}
+    <NavLink to="/orders" className="text-dark text-decoration-none d-flex align-items-center gap-2 nav-icon">
+      <FaBoxOpen size={20} />
+      <span className="d-none d-md-inline">Mis compras</span>
+    </NavLink>
 
-          <li className="nav-item px-3">
-            <NavLink className="nav-link" to="/smartphones">Smartphones</NavLink>
-          </li>
+    {/* Ayuda */}
+    <NavLink to="/help" className="text-dark text-decoration-none d-flex align-items-center gap-2 nav-icon">
+      <FaQuestionCircle size={20} />
+      <span className="d-none d-md-inline">Ayuda</span>
+    </NavLink>
 
-          <li className="nav-item px-3">
-            <NavLink className="nav-link" to="/laptops">Laptops</NavLink>
-          </li>
+  </div>
 
-          <li className="nav-item px-3">
-            <NavLink className="nav-link" to="/tablets">Tablets</NavLink>
-          </li>
-
-          <li className="nav-item px-3">
-            <NavLink className="nav-link" to="/accesorios">Accesorios</NavLink>
-          </li>
-
-        </ul>
-      </div>
-    </nav>
+</nav>
   );
 };
 
