@@ -1,25 +1,31 @@
 {
   "files": {
     "main.css": "/retech-web/static/css/main.38e21a97.css",
-    "main.js": "/retech-web/static/js/main.9c97c23b.js",
+    "main.js": "/retech-web/static/js/main.a6c38fe4.js",
+    "static/media/HP EliteBook 840 G6.jpg": "/retech-web/static/media/HP EliteBook 840 G6.25439e1fde5513baa1b0.jpg",
     "static/media/bootstrap-icons.woff?": "/retech-web/static/media/bootstrap-icons.1295669cd4e305c97f2c.woff",
+    "static/media/Galaxy Tab S6 Lite.jpg": "/retech-web/static/media/Galaxy Tab S6 Lite.bf84564fe551246a30e1.jpg",
     "static/media/bootstrap-icons.woff2?": "/retech-web/static/media/bootstrap-icons.92ea18a81d737146ff04.woff2",
     "static/media/iphone-deal.jpg": "/retech-web/static/media/iphone-deal.be7a137552745c57e6ea.jpg",
     "static/media/retech-logo.png": "/retech-web/static/media/retech-logo.e64d7db98f7498c5d474.png",
     "static/media/Samsung Galaxy S22.jpg": "/retech-web/static/media/Samsung Galaxy S22.179907026424bd177e9e.jpg",
+    "static/media/Dell Latitude 5410.jpg": "/retech-web/static/media/Dell Latitude 5410.632f0ae50f3aa53e3994.jpg",
     "static/media/ipad-deal.jpg": "/retech-web/static/media/ipad-deal.e05c99fbcd15561c51e9.jpg",
+    "static/media/Galaxy Tab A7.jpg": "/retech-web/static/media/Galaxy Tab A7.f394ecdb86e61aa81ab6.jpg",
     "static/media/Redmi Note 11 Pro.jpg": "/retech-web/static/media/Redmi Note 11 Pro.9ea334d2ae19eba95baf.jpg",
+    "static/media/Lenovo ThinkPad T480.jpg": "/retech-web/static/media/Lenovo ThinkPad T480.e06bb5706dc9c4ae0ebb.jpg",
     "static/media/poco-m5.jpg": "/retech-web/static/media/poco-m5.e16283f89523e3b22ab8.jpg",
+    "static/media/iPad Air 4.jpg": "/retech-web/static/media/iPad Air 4.6e2cf460fbffab5dfc14.jpg",
     "static/media/iphone-13.jpg": "/retech-web/static/media/iphone-13.e5637dd8a0ecc7289609.jpg",
     "static/media/iphone-11.jpg": "/retech-web/static/media/iphone-11.4f231d8b6534c1e3b162.jpg",
     "static/media/macbook-deal.jpg": "/retech-web/static/media/macbook-deal.0d9c1a3caa049b5e8848.jpg",
     "static/media/Galaxy-A34.jpg": "/retech-web/static/media/Galaxy-A34.513aa964df2f7f2fd534.jpg",
     "index.html": "/retech-web/index.html",
     "main.38e21a97.css.map": "/retech-web/static/css/main.38e21a97.css.map",
-    "main.9c97c23b.js.map": "/retech-web/static/js/main.9c97c23b.js.map"
+    "main.a6c38fe4.js.map": "/retech-web/static/js/main.a6c38fe4.js.map"
   },
   "entrypoints": [
     "static/css/main.38e21a97.css",
-    "static/js/main.9c97c23b.js"
+    "static/js/main.a6c38fe4.js"
   ]
 }
