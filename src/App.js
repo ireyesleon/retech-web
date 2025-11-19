@@ -3,6 +3,9 @@ import Nav from "./components/Nav";
 import About from "./components/About";
 import Footer from "./components/Footer";
 import CelularesList from "./components/CelularesList";
+import Laptops from "./components/Laptops";
+import Tablets from "./components/Tablets";
+import CarritoPage from "./components/CarritoPage";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
@@ -10,16 +13,20 @@ function App() {
     <Router basename={process.env.PUBLIC_URL}>
       <Nav />
       <Routes>
-        {/* Home / landing */}
+        {/* Home / About */}
         <Route path="/" element={<About />} />
-
-        {/* Alias opcional: /about también muestra About */}
         <Route path="/about" element={<About />} />
+        <Route path="/retech" element={<About />} />
 
-        {/* Rutas de deals */}
+        {/* Listados */}
         <Route path="/deals/celulares" element={<CelularesList />} />
+        <Route path="/deals/laptops" element={<Laptops />} />
+        <Route path="/deals/tablets" element={<Tablets />} />
 
-        {/* Cualquier cosa rara → About */}
+        {/* Carrito */}
+        <Route path="/carrito" element={<CarritoPage />} />
+
+        {/* Cualquier ruta rara → About */}
         <Route path="*" element={<About />} />
       </Routes>
       <Footer />

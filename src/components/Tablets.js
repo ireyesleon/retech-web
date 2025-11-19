@@ -1,105 +1,57 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-const productosCelulares = [
+const productosTablets = [
   {
     id: 1,
-    nombre: "iPhone 13",
-    precio: 7999,
+    nombre: "iPad Air 4",
+    precio: 7499,
     marca: "Apple",
-    almacenamiento: "128GB",
-    grado: "Grado A – Como nuevo",
-    desempeno: "Rápido y fluido para redes sociales, fotos y apps de trabajo.",
-    bateria: "Batería con excelente rendimiento para todo el día con uso moderado.",
+    almacenamiento: "64GB • 10.2\"",
+    grado: "Grado A – Como nueva",
+    desempeno: "Fluida para streaming, videollamadas y apps educativas.",
+    bateria: "Hasta 10 horas de uso continuo.",
     reacondicionamiento:
-      "Equipo revisado y probado. Sin golpes visibles, solo marcas mínimas de uso.",
-    imagen: require("../assets/images/iphone-13.jpg"),
+      "Pantalla impecable, sin rayones visibles. Funcionamiento perfecto.",
+    imagen: require("../assets/images/iPad Air 4.jpg"),
   },
   {
     id: 2,
-    nombre: "Samsung Galaxy S21",
-    precio: 6999,
+    nombre: "Galaxy Tab S6 Lite",
+    precio: 5299,
     marca: "Samsung",
-    almacenamiento: "256GB",
-    grado: "Grado B – Muy buen estado",
-    desempeno: "Ideal para multitarea, juegos casuales y cámara de buena calidad.",
-    bateria:
-      "Buena duración durante el día. Puede requerir una carga extra con uso intenso.",
+    almacenamiento: "64GB • 10.5\"",
+    grado: "Grado B – Buen estado",
+    desempeno: "Ideal para lectura, redes sociales y videos.",
+    bateria: "Autonomía de un día completo con uso moderado.",
     reacondicionamiento:
-      "Puede tener ligeros rayones en carcasa, pantalla sin daños importantes.",
-    imagen: require("../assets/images/Samsung Galaxy S22.jpg"),
+      "Marcas leves en carcasa, batería y rendimiento verificados.",
+    imagen: require("../assets/images/Galaxy Tab S6 Lite.jpg"),
   },
   {
     id: 3,
-    nombre: "Xiaomi Redmi Note 12",
-    precio: 5200,
-    marca: "Xiaomi",
-    almacenamiento: "128GB",
-    grado: "Grado A – Como nuevo",
-    desempeno:
-      "Perfecto para uso diario: redes sociales, videos y apps bancarias sin trabarse.",
-    bateria:
-      "Muy buena autonomía, pensado para durar todo el día incluso con uso frecuente.",
-    reacondicionamiento:
-      "Luce casi como nuevo. Revisado y limpiado, con piezas originales funcionales.",
-    imagen: require("../assets/images/Redmi Note 11 Pro.jpg"),
-  },
-  {
-    id: 4,
-    nombre: "iPhone 11",
-    precio: 4799,
-    marca: "Apple",
-    almacenamiento: "64GB",
-    grado: "Grado B – Detalles estéticos leves",
-    desempeno:
-      "Rendimiento estable para llamadas, WhatsApp, fotos y apps básicas.",
-    bateria:
-      "Duración adecuada para la mayor parte del día con uso moderado.",
-    reacondicionamiento:
-      "Puede presentar pequeños detalles estéticos que no afectan el funcionamiento.",
-    imagen: require("../assets/images/iphone-11.jpg"),
-  },
-  {
-    id: 5,
-    nombre: "Samsung Galaxy S21",
-    precio: 4299,
-    marca: "Samsung",
-    almacenamiento: "256GB",
-    grado: "Grado C – Buen estado funcional",
-    desempeno:
-      "Funciona bien para tareas cotidianas, aunque no está enfocado en juegos pesados.",
-    bateria:
-      "Batería con buen desempeño, puede necesitar carga extra si se usa muchas horas.",
-    reacondicionamiento:
-      "Puede tener marcas visibles de uso, pero todas las funciones están probadas.",
-    imagen: require("../assets/images/Galaxy-A34.jpg"),
-  },
-  {
-    id: 6,
-    nombre: "Xiaomi POCO M5",
+    nombre: "Galaxy Tab A7",
     precio: 3999,
-    marca: "Xiaomi",
-    almacenamiento: "64GB",
+    marca: "Samsung",
+    almacenamiento: "64GB • 10.3\"",
     grado: "Grado B – Muy buen estado",
-    desempeno:
-      "Buen rendimiento para redes sociales, videos y navegación en internet.",
-    bateria:
-      "Pensado para durar el día completo con uso normal sin necesidad de recarga constante.",
+    desempeno: "Perfecta para estudiantes y uso familiar.",
+    bateria: "Buena duración durante el día.",
     reacondicionamiento:
-      "Equipo revisado, limpio y en muy buen estado general, con leves señales de uso.",
-    imagen: require("../assets/images/poco-m5.jpg"),
+      "Revisada y probada, con funcionamiento excelente.",
+    imagen: require("../assets/images/Galaxy Tab A7.jpg"),
   },
 ];
 
-export default function CelularesList() {
+export default function Tablets() {
   const [marcaFiltro, setMarcaFiltro] = useState("");
   const [precioMax, setPrecioMax] = useState(20000);
   const [carrito, setCarrito] = useState([]);
   const navigate = useNavigate();
 
-  const marcas = [...new Set(productosCelulares.map((p) => p.marca))];
+  const marcas = [...new Set(productosTablets.map((p) => p.marca))];
 
-  const productosFiltrados = productosCelulares.filter((p) => {
+  const productosFiltrados = productosTablets.filter((p) => {
     return (
       (marcaFiltro ? p.marca === marcaFiltro : true) &&
       p.precio <= precioMax

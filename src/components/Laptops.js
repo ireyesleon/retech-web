@@ -1,105 +1,57 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-const productosCelulares = [
+const productosLaptops = [
   {
     id: 1,
-    nombre: "iPhone 13",
-    precio: 7999,
-    marca: "Apple",
-    almacenamiento: "128GB",
-    grado: "Grado A – Como nuevo",
-    desempeno: "Rápido y fluido para redes sociales, fotos y apps de trabajo.",
-    bateria: "Batería con excelente rendimiento para todo el día con uso moderado.",
+    nombre: "Dell Latitude 5410",
+    precio: 14999,
+    marca: "Dell",
+    almacenamiento: "256GB SSD • 8GB RAM",
+    grado: "Grado A – Como nueva",
+    desempeno: "Ideal para trabajo, estudio y apps exigentes con excelente fluidez.",
+    bateria: "Hasta 12 horas de uso moderado.",
     reacondicionamiento:
-      "Equipo revisado y probado. Sin golpes visibles, solo marcas mínimas de uso.",
-    imagen: require("../assets/images/iphone-13.jpg"),
+      "Equipo inspeccionado, sin marcas visibles. Funcionamiento al 100%.",
+    imagen: require("../assets/images/Dell Latitude 5410.jpg"),
   },
   {
     id: 2,
-    nombre: "Samsung Galaxy S21",
-    precio: 6999,
-    marca: "Samsung",
-    almacenamiento: "256GB",
+    nombre: "Lenovo ThinkPad T480",
+    precio: 7999,
+    marca: "Lenovo",
+    almacenamiento: "512GB SSD • 16GB RAM",
     grado: "Grado B – Muy buen estado",
-    desempeno: "Ideal para multitarea, juegos casuales y cámara de buena calidad.",
-    bateria:
-      "Buena duración durante el día. Puede requerir una carga extra con uso intenso.",
+    desempeno: "Perfecta para multitarea, oficina, videollamadas y navegación.",
+    bateria: "Rinde toda la jornada con uso estándar.",
     reacondicionamiento:
-      "Puede tener ligeros rayones en carcasa, pantalla sin daños importantes.",
-    imagen: require("../assets/images/Samsung Galaxy S22.jpg"),
+      "Pequeños detalles estéticos en carcasa, sin afectar el rendimiento.",
+    imagen: require("../assets/images/Lenovo ThinkPad T480.jpg"),
   },
   {
     id: 3,
-    nombre: "Xiaomi Redmi Note 12",
-    precio: 5200,
-    marca: "Xiaomi",
-    almacenamiento: "128GB",
-    grado: "Grado A – Como nuevo",
-    desempeno:
-      "Perfecto para uso diario: redes sociales, videos y apps bancarias sin trabarse.",
-    bateria:
-      "Muy buena autonomía, pensado para durar todo el día incluso con uso frecuente.",
+    nombre: "HP EliteBook 840 G6",
+    precio: 6999,
+    marca: "Dell",
+    almacenamiento: "256GB SSD • 8GB RAM",
+    grado: "Grado B – Buen estado general",
+    desempeno: "Muy buena opción para tareas diarias y trabajo de oficina.",
+    bateria: "Buena duración para una jornada laboral promedio.",
     reacondicionamiento:
-      "Luce casi como nuevo. Revisado y limpiado, con piezas originales funcionales.",
-    imagen: require("../assets/images/Redmi Note 11 Pro.jpg"),
-  },
-  {
-    id: 4,
-    nombre: "iPhone 11",
-    precio: 4799,
-    marca: "Apple",
-    almacenamiento: "64GB",
-    grado: "Grado B – Detalles estéticos leves",
-    desempeno:
-      "Rendimiento estable para llamadas, WhatsApp, fotos y apps básicas.",
-    bateria:
-      "Duración adecuada para la mayor parte del día con uso moderado.",
-    reacondicionamiento:
-      "Puede presentar pequeños detalles estéticos que no afectan el funcionamiento.",
-    imagen: require("../assets/images/iphone-11.jpg"),
-  },
-  {
-    id: 5,
-    nombre: "Samsung Galaxy S21",
-    precio: 4299,
-    marca: "Samsung",
-    almacenamiento: "256GB",
-    grado: "Grado C – Buen estado funcional",
-    desempeno:
-      "Funciona bien para tareas cotidianas, aunque no está enfocado en juegos pesados.",
-    bateria:
-      "Batería con buen desempeño, puede necesitar carga extra si se usa muchas horas.",
-    reacondicionamiento:
-      "Puede tener marcas visibles de uso, pero todas las funciones están probadas.",
-    imagen: require("../assets/images/Galaxy-A34.jpg"),
-  },
-  {
-    id: 6,
-    nombre: "Xiaomi POCO M5",
-    precio: 3999,
-    marca: "Xiaomi",
-    almacenamiento: "64GB",
-    grado: "Grado B – Muy buen estado",
-    desempeno:
-      "Buen rendimiento para redes sociales, videos y navegación en internet.",
-    bateria:
-      "Pensado para durar el día completo con uso normal sin necesidad de recarga constante.",
-    reacondicionamiento:
-      "Equipo revisado, limpio y en muy buen estado general, con leves señales de uso.",
-    imagen: require("../assets/images/poco-m5.jpg"),
+      "Presenta señales leves de uso, probada y funcionando correctamente.",
+    imagen: require("../assets/images/HP EliteBook 840 G6.jpg"),
   },
 ];
 
-export default function CelularesList() {
+export default function Laptops() {
   const [marcaFiltro, setMarcaFiltro] = useState("");
-  const [precioMax, setPrecioMax] = useState(20000);
+  const [precioMax, setPrecioMax] = useState(30000);
   const [carrito, setCarrito] = useState([]);
   const navigate = useNavigate();
 
-  const marcas = [...new Set(productosCelulares.map((p) => p.marca))];
+  const marcas = [...new Set(productosLaptops.map((p) => p.marca))];
 
-  const productosFiltrados = productosCelulares.filter((p) => {
+  const productosFiltrados = productosLaptops.filter((p) => {
     return (
       (marcaFiltro ? p.marca === marcaFiltro : true) &&
       p.precio <= precioMax
@@ -171,9 +123,9 @@ export default function CelularesList() {
             </label>
             <input
               type="range"
-              min="1000"
-              max="20000"
-              step="500"
+              min="3000"
+              max="30000"
+              step="1000"
               value={precioMax}
               className="form-range"
               onChange={(e) => setPrecioMax(Number(e.target.value))}

@@ -74,8 +74,11 @@ const About = () => {
         </p>
       </div>
     </Link>
+    
   </div>
-
+  <Link to="/deals" className="btn btn-success btn-lg mt-3 col-12 col-sm-2 col-md-6 col-lg-4">
+          Ver todas las ofertas
+        </Link>
 </div>
 
 
@@ -164,10 +167,6 @@ const About = () => {
           Cada equipo pasa por un proceso de prueba de más de 20 puntos para asegurar el máximo rendimiento.  
           Calidad premium, precio justo.
         </p>
-
-        <Link to="/deals" className="btn btn-success btn-lg mt-3">
-          Ver todas las ofertas
-        </Link>
       </div>
 
       {/* ================= SUSTENTABILIDAD & PRODUCT EXCHANGE ================= */}
