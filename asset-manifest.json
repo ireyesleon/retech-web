@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/cliniia/static/css/main.cf546e1f.css",
-    "main.js": "/cliniia/static/js/main.32827c99.js",
-    "static/media/bootstrap-icons.woff?": "/cliniia/static/media/bootstrap-icons.1295669cd4e305c97f2c.woff",
-    "static/media/bootstrap-icons.woff2?": "/cliniia/static/media/bootstrap-icons.92ea18a81d737146ff04.woff2",
-    "static/media/iphone-deal.jpg": "/cliniia/static/media/iphone-deal.be7a137552745c57e6ea.jpg",
-    "static/media/retech-logo.png": "/cliniia/static/media/retech-logo.e64d7db98f7498c5d474.png",
-    "static/media/Samsung Galaxy S22.jpg": "/cliniia/static/media/Samsung Galaxy S22.179907026424bd177e9e.jpg",
-    "static/media/ipad-deal.jpg": "/cliniia/static/media/ipad-deal.e05c99fbcd15561c51e9.jpg",
-    "static/media/Redmi Note 11 Pro.jpg": "/cliniia/static/media/Redmi Note 11 Pro.9ea334d2ae19eba95baf.jpg",
-    "static/media/iphone-13.jpg": "/cliniia/static/media/iphone-13.e5637dd8a0ecc7289609.jpg",
-    "static/media/macbook-deal.jpg": "/cliniia/static/media/macbook-deal.0d9c1a3caa049b5e8848.jpg",
-    "index.html": "/cliniia/index.html",
-    "main.cf546e1f.css.map": "/cliniia/static/css/main.cf546e1f.css.map",
-    "main.32827c99.js.map": "/cliniia/static/js/main.32827c99.js.map"
+    "main.css": "/retech/static/css/main.883606f4.css",
+    "main.js": "/retech/static/js/main.2abbe9b5.js",
+    "static/media/bootstrap-icons.woff?": "/retech/static/media/bootstrap-icons.1295669cd4e305c97f2c.woff",
+    "static/media/bootstrap-icons.woff2?": "/retech/static/media/bootstrap-icons.92ea18a81d737146ff04.woff2",
+    "static/media/iphone-deal.jpg": "/retech/static/media/iphone-deal.be7a137552745c57e6ea.jpg",
+    "static/media/retech-logo.png": "/retech/static/media/retech-logo.e64d7db98f7498c5d474.png",
+    "static/media/Samsung Galaxy S22.jpg": "/retech/static/media/Samsung Galaxy S22.179907026424bd177e9e.jpg",
+    "static/media/ipad-deal.jpg": "/retech/static/media/ipad-deal.e05c99fbcd15561c51e9.jpg",
+    "static/media/Redmi Note 11 Pro.jpg": "/retech/static/media/Redmi Note 11 Pro.9ea334d2ae19eba95baf.jpg",
+    "static/media/iphone-13.jpg": "/retech/static/media/iphone-13.e5637dd8a0ecc7289609.jpg",
+    "static/media/macbook-deal.jpg": "/retech/static/media/macbook-deal.0d9c1a3caa049b5e8848.jpg",
+    "index.html": "/retech/index.html",
+    "main.883606f4.css.map": "/retech/static/css/main.883606f4.css.map",
+    "main.2abbe9b5.js.map": "/retech/static/js/main.2abbe9b5.js.map"
   },
   "entrypoints": [
-    "static/css/main.cf546e1f.css",
-    "static/js/main.32827c99.js"
+    "static/css/main.883606f4.css",
+    "static/js/main.2abbe9b5.js"
   ]
 }
