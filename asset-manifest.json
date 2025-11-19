@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/retech/static/css/main.883606f4.css",
-    "main.js": "/retech/static/js/main.2abbe9b5.js",
+    "main.css": "/retech/static/css/main.f1625b93.css",
+    "main.js": "/retech/static/js/main.2cf37ea6.js",
     "static/media/bootstrap-icons.woff?": "/retech/static/media/bootstrap-icons.1295669cd4e305c97f2c.woff",
     "static/media/bootstrap-icons.woff2?": "/retech/static/media/bootstrap-icons.92ea18a81d737146ff04.woff2",
     "static/media/iphone-deal.jpg": "/retech/static/media/iphone-deal.be7a137552745c57e6ea.jpg",
@@ -9,14 +9,17 @@
     "static/media/Samsung Galaxy S22.jpg": "/retech/static/media/Samsung Galaxy S22.179907026424bd177e9e.jpg",
     "static/media/ipad-deal.jpg": "/retech/static/media/ipad-deal.e05c99fbcd15561c51e9.jpg",
     "static/media/Redmi Note 11 Pro.jpg": "/retech/static/media/Redmi Note 11 Pro.9ea334d2ae19eba95baf.jpg",
+    "static/media/poco-m5.jpg": "/retech/static/media/poco-m5.e16283f89523e3b22ab8.jpg",
     "static/media/iphone-13.jpg": "/retech/static/media/iphone-13.e5637dd8a0ecc7289609.jpg",
+    "static/media/iphone-11.jpg": "/retech/static/media/iphone-11.4f231d8b6534c1e3b162.jpg",
     "static/media/macbook-deal.jpg": "/retech/static/media/macbook-deal.0d9c1a3caa049b5e8848.jpg",
+    "static/media/Galaxy-A34.jpg": "/retech/static/media/Galaxy-A34.513aa964df2f7f2fd534.jpg",
     "index.html": "/retech/index.html",
-    "main.883606f4.css.map": "/retech/static/css/main.883606f4.css.map",
-    "main.2abbe9b5.js.map": "/retech/static/js/main.2abbe9b5.js.map"
+    "main.f1625b93.css.map": "/retech/static/css/main.f1625b93.css.map",
+    "main.2cf37ea6.js.map": "/retech/static/js/main.2cf37ea6.js.map"
   },
   "entrypoints": [
-    "static/css/main.883606f4.css",
-    "static/js/main.2abbe9b5.js"
+    "static/css/main.f1625b93.css",
+    "static/js/main.2cf37ea6.js"
   ]
 }
