@@ -16,7 +16,20 @@ const About = () => {
 
   return (
     <section className="container py-5">
-      <h2 className="fw-bold mb-4 text-center">Ofertas destacadas</h2>
+      <h2 className="fw-bold mb-4 text-center">Categorías</h2>
+
+      {/* ========== CATEGORY BAR (NEW) ========== */}
+      <div className="d-flex justify-content-center gap-3 mb-4">
+        <Link className="btn btn-outline-success px-4" to="/deals/celulares">
+          📱 Celulares
+        </Link>
+        <Link className="btn btn-outline-success px-4" to="/deals/laptops">
+          💻 Laptops
+        </Link>
+        <Link className="btn btn-outline-success px-4" to="/deals/tablets">
+          📟 Tablets
+        </Link>
+      </div>
 
       {/* ================= IMAGES ROW (TOP) ================= */}
       <div className="row justify-content-center mb-4">
@@ -33,10 +46,10 @@ const About = () => {
                   className="d-block w-100"
                   src={require('../assets/images/iphone-deal.jpg')}
                   alt="iPhone Deal"
-                  style={{ maxHeight: "48vh", objectFit: "cover" }}
+                  style={{ maxHeight: "55vh", objectFit: "cover" }}
                 />
                 <div className="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-2">
-                  <h5>iPhone 12 – Reacondicionado Premium</h5>
+                  <h5>iPhone 17 – Reacondicionado Premium</h5>
                   <p>Hasta 35% de descuento</p>
                 </div>
               </div>
@@ -47,10 +60,10 @@ const About = () => {
                   className="d-block w-100"
                   src={require('../assets/images/macbook-deal.jpg')}
                   alt="MacBook Deal"
-                  style={{ maxHeight: "48vh", objectFit: "cover" }}
+                  style={{ maxHeight: "55vh", objectFit: "cover" }}
                 />
                 <div className="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-2">
-                  <h5>MacBook Pro – Reacondicionado</h5>
+                  <h5>HP EliteBook 840 G6 – Reacondicionado</h5>
                   <p>Ahorra hasta $4,000 MXN</p>
                 </div>
               </div>
@@ -61,12 +74,8 @@ const About = () => {
                   className="d-block w-100"
                   src={require('../assets/images/ipad-deal.jpg')}
                   alt="iPad Deal"
-                  style={{ maxHeight: "48vh", objectFit: "cover" }}
+                  style={{ maxHeight: "55vh", objectFit: "cover" }}
                 />
-                <div className="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-2">
-                  <h5>iPad 9na Gen – Como Nuevo</h5>
-                  <p>Desde $3,999 MXN</p>
-                </div>
               </div>
 
             </div>
