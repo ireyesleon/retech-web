@@ -16,20 +16,68 @@ const About = () => {
 
   return (
     <section className="container py-5">
-      <h2 className="fw-bold mb-4 text-center">Categorías</h2>
+      {/* ========== CATEGORY CARDS (NEW DESIGN) ========== */}
+<div className="row g-4 mb-5 justify-content-center">
 
-      {/* ========== CATEGORY BAR (NEW) ========== */}
-      <div className="d-flex justify-content-center gap-3 mb-4">
-        <Link className="btn btn-outline-success px-4" to="/deals/celulares">
-          📱 Celulares
-        </Link>
-        <Link className="btn btn-outline-success px-4" to="/deals/laptops">
-          💻 Laptops
-        </Link>
-        <Link className="btn btn-outline-success px-4" to="/deals/tablets">
-          📟 Tablets
-        </Link>
+  {/* Celulares */}
+  <div className="col-10 col-md-3">
+    <Link
+      to="/deals/celulares"
+      className="text-decoration-none"
+    >
+      <div
+        className="card shadow-sm border-0 text-center p-4 h-100 category-card"
+        style={{ backgroundColor: "#f4fdf6" }}
+      >
+        <div className="fs-1 mb-2">📱</div>
+        <h5 className="fw-bold text-dark">Celulares</h5>
+        <p className="text-muted small mb-0">
+          Los mejores equipos reacondicionados.
+        </p>
       </div>
+    </Link>
+  </div>
+
+  {/* Laptops */}
+  <div className="col-10 col-md-3">
+    <Link
+      to="/deals/laptops"
+      className="text-decoration-none"
+    >
+      <div
+        className="card shadow-sm border-0 text-center p-4 h-100 category-card"
+        style={{ backgroundColor: "#f2f7ff" }}
+      >
+        <div className="fs-1 mb-2">💻</div>
+        <h5 className="fw-bold text-dark">Laptops</h5>
+        <p className="text-muted small mb-0">
+          Productividad, rendimiento y precio justo.
+        </p>
+      </div>
+    </Link>
+  </div>
+
+  {/* Tablets */}
+  <div className="col-10 col-md-3">
+    <Link
+      to="/deals/tablets"
+      className="text-decoration-none"
+    >
+      <div
+        className="card shadow-sm border-0 text-center p-4 h-100 category-card"
+        style={{ backgroundColor: "#fff8f2" }}
+      >
+        <div className="fs-1 mb-2">📟</div>
+        <h5 className="fw-bold text-dark">Tablets</h5>
+        <p className="text-muted small mb-0">
+          Portabilidad y desempeño para todos.
+        </p>
+      </div>
+    </Link>
+  </div>
+
+</div>
+
 
       {/* ================= IMAGES ROW (TOP) ================= */}
       <div className="row justify-content-center mb-4">
@@ -104,7 +152,7 @@ const About = () => {
       </div>
 
       {/* ================= TEXT SECTION (BOTTOM) ================= */}
-      <div className="text-center px-3">
+      <div className="text-center px-3 mb-5">
         <h3 className="fw-bold mb-3">Ofertas que no puedes dejar pasar</h3>
 
         <p>
@@ -121,6 +169,77 @@ const About = () => {
           Ver todas las ofertas
         </Link>
       </div>
+
+      {/* ================= SUSTENTABILIDAD & PRODUCT EXCHANGE ================= */}
+<div className="row g-4 align-items-stretch">
+
+  {/* Sostenibilidad */}
+  <div className="col-12 col-md-6">
+    <div
+      className="card h-100 shadow-sm border-0 p-3"
+      style={{ backgroundColor: "#e9f7ef" }} // verde suave
+    >
+      <div className="card-body">
+        <h4 className="fw-bold mb-3">🌱 Tecnología más responsable con el planeta</h4>
+
+        <p>
+          Cada dispositivo reacondicionado que eliges evita que un equipo más
+          termine como residuo electrónico y reduce la demanda de nuevas materias
+          primas, agua y energía.
+        </p>
+
+        <ul className="text-start mb-3">
+          <li>Disminuimos la huella de carbono extendiendo la vida útil de cada equipo.</li>
+          <li>Reducimos residuos electrónicos dándole una segunda vida a la tecnología.</li>
+          <li>Reutilizamos componentes en buen estado y reciclamos el resto de forma responsable.</li>
+        </ul>
+
+        <p className="text-muted small mb-0">
+          Tu compra no solo cuida tu bolsillo, también cuida el planeta.
+          Pequeñas decisiones, gran impacto.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  {/* Product Exchange */}
+  <div className="col-12 col-md-6">
+    <div
+      className="card h-100 shadow-sm border-0 p-3"
+      style={{ backgroundColor: "#e9f2fb" }} // azul suave
+    >
+      <div className="card-body">
+        <h4 className="fw-bold mb-3">🔄 Programa Product Exchange</h4>
+
+        <p>
+          Trae tu celular, tablet o laptop usados y obtén un descuento en tu próxima compra Retech.
+          Nosotros nos encargamos de reacondicionarlos o reciclarlos correctamente.
+        </p>
+
+        <ol className="text-start mb-3">
+          <li>Cuéntanos qué equipo quieres entregar y su estado general.</li>
+          <li>Te damos una estimación de valor y el descuento que puedes obtener.</li>
+          <li>Entregas tu equipo en tienda o por paquetería y aplicas tu descuento en la compra.</li>
+        </ol>
+
+        <p className="text-muted small">
+          Mientras mejor estado tenga tu dispositivo, mayor puede ser tu descuento.
+        </p>
+
+        <div className="d-flex flex-wrap gap-2">
+          <Link to="/product-exchange" className="btn btn-outline-success">
+            Conoce el programa
+          </Link>
+          <Link to="/product-exchange/simula" className="btn btn-outline-secondary">
+            Simula tu descuento
+          </Link>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
     </section>
   );
 };
