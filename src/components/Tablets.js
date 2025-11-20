@@ -13,6 +13,7 @@ const productosTablets = [
     bateria: "Hasta 10 horas de uso continuo.",
     reacondicionamiento:
       "Pantalla impecable, sin rayones visibles. Funcionamiento perfecto.",
+    huellaCarbono: "Ahorro estimado: 40 kg de CO₂ vs comprarla nueva.",
     imagen: require("../assets/images/iPad Air 4.jpg"),
   },
   {
@@ -26,6 +27,7 @@ const productosTablets = [
     bateria: "Autonomía de un día completo con uso moderado.",
     reacondicionamiento:
       "Marcas leves en carcasa, batería y rendimiento verificados.",
+    huellaCarbono: "Ahorro estimado: 35 kg de CO₂ vs comprarla nueva.",
     imagen: require("../assets/images/Galaxy Tab S6 Lite.jpg"),
   },
   {
@@ -39,6 +41,7 @@ const productosTablets = [
     bateria: "Buena duración durante el día.",
     reacondicionamiento:
       "Revisada y probada, con funcionamiento excelente.",
+    huellaCarbono: "Ahorro estimado: 30 kg de CO₂ vs comprarla nueva.",
     imagen: require("../assets/images/Galaxy Tab A7.jpg"),
   },
 ];
@@ -179,9 +182,14 @@ export default function Tablets() {
                   <p className="mb-1">
                     <strong>Duración de batería:</strong> {prod.bateria}
                   </p>
-                  <p className="mb-0">
+                  <p className="mb-1">
                     <strong>Reacondicionamiento:</strong>{" "}
                     {prod.reacondicionamiento}
+                  </p>
+
+                  {/* HUELLA DE CARBONO 🌱 */}
+                  <p className="mb-0 text-success">
+                    <strong>Huella de carbono:</strong> {prod.huellaCarbono}
                   </p>
                 </div>
 

@@ -13,6 +13,7 @@ const productosLaptops = [
     bateria: "Hasta 12 horas de uso moderado.",
     reacondicionamiento:
       "Equipo inspeccionado, sin marcas visibles. Funcionamiento al 100%.",
+    huellaCarbono: "Ahorro estimado: 75 kg de CO₂ vs comprarla nueva.",
     imagen: require("../assets/images/Dell Latitude 5410.jpg"),
   },
   {
@@ -26,19 +27,21 @@ const productosLaptops = [
     bateria: "Rinde toda la jornada con uso estándar.",
     reacondicionamiento:
       "Pequeños detalles estéticos en carcasa, sin afectar el rendimiento.",
+    huellaCarbono: "Ahorro estimado: 70 kg de CO₂ vs comprarla nueva.",
     imagen: require("../assets/images/Lenovo ThinkPad T480.jpg"),
   },
   {
     id: 3,
     nombre: "HP EliteBook 840 G6",
     precio: 6999,
-    marca: "Dell",
+    marca: "HP",
     almacenamiento: "256GB SSD • 8GB RAM",
     grado: "Grado B – Buen estado general",
     desempeno: "Muy buena opción para tareas diarias y trabajo de oficina.",
     bateria: "Buena duración para una jornada laboral promedio.",
     reacondicionamiento:
       "Presenta señales leves de uso, probada y funcionando correctamente.",
+    huellaCarbono: "Ahorro estimado: 68 kg de CO₂ vs comprarla nueva.",
     imagen: require("../assets/images/HP EliteBook 840 G6.jpg"),
   },
 ];
@@ -60,9 +63,7 @@ export default function Laptops() {
 
   const agregarAlCarrito = (producto) => {
     const yaEsta = carrito.some((item) => item.id === producto.id);
-    if (!yaEsta) {
-      setCarrito([...carrito, producto]);
-    }
+    if (!yaEsta) setCarrito([...carrito, producto]);
   };
 
   const estaEnCarrito = (id) => carrito.some((item) => item.id === id);
@@ -140,9 +141,7 @@ export default function Laptops() {
           <div key={prod.id} className="col-md-4">
             <div
               className="card h-100 shadow-sm border-0"
-              style={{
-                transition: "transform 0.2s, box-shadow 0.2s",
-              }}
+              style={{ transition: "transform 0.2s, box-shadow 0.2s" }}
             >
               <div
                 className="position-relative"
@@ -168,6 +167,7 @@ export default function Laptops() {
                 </span>
               </div>
 
+              {/* INFO DEL PRODUCTO */}
               <div className="card-body d-flex flex-column">
                 <h5 className="card-title mb-1">{prod.nombre}</h5>
                 <p className="mb-1 text-muted small">{prod.grado}</p>
@@ -179,9 +179,12 @@ export default function Laptops() {
                   <p className="mb-1">
                     <strong>Duración de batería:</strong> {prod.bateria}
                   </p>
-                  <p className="mb-0">
+                  <p className="mb-1">
                     <strong>Reacondicionamiento:</strong>{" "}
                     {prod.reacondicionamiento}
+                  </p>
+                  <p className="mb-0 text-success">
+                    <strong>Huella de carbono:</strong> {prod.huellaCarbono}
                   </p>
                 </div>
 

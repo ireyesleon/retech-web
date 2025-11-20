@@ -13,6 +13,7 @@ const productosCelulares = [
     bateria: "Batería con excelente rendimiento para todo el día con uso moderado.",
     reacondicionamiento:
       "Equipo revisado y probado. Sin golpes visibles, solo marcas mínimas de uso.",
+    huellaCarbono: "Ahorro estimado: 55 kg de CO₂ vs comprarlo nuevo.",
     imagen: require("../assets/images/iphone-13.jpg"),
   },
   {
@@ -27,6 +28,7 @@ const productosCelulares = [
       "Buena duración durante el día. Puede requerir una carga extra con uso intenso.",
     reacondicionamiento:
       "Puede tener ligeros rayones en carcasa, pantalla sin daños importantes.",
+    huellaCarbono: "Ahorro estimado: 50 kg de CO₂ vs comprarlo nuevo.",
     imagen: require("../assets/images/Samsung Galaxy S22.jpg"),
   },
   {
@@ -42,6 +44,7 @@ const productosCelulares = [
       "Muy buena autonomía, pensado para durar todo el día incluso con uso frecuente.",
     reacondicionamiento:
       "Luce casi como nuevo. Revisado y limpiado, con piezas originales funcionales.",
+    huellaCarbono: "Ahorro estimado: 45 kg de CO₂ vs comprarlo nuevo.",
     imagen: require("../assets/images/Redmi Note 11 Pro.jpg"),
   },
   {
@@ -57,6 +60,7 @@ const productosCelulares = [
       "Duración adecuada para la mayor parte del día con uso moderado.",
     reacondicionamiento:
       "Puede presentar pequeños detalles estéticos que no afectan el funcionamiento.",
+    huellaCarbono: "Ahorro estimado: 48 kg de CO₂ vs comprarlo nuevo.",
     imagen: require("../assets/images/iphone-11.jpg"),
   },
   {
@@ -72,6 +76,7 @@ const productosCelulares = [
       "Batería con buen desempeño, puede necesitar carga extra si se usa muchas horas.",
     reacondicionamiento:
       "Puede tener marcas visibles de uso, pero todas las funciones están probadas.",
+    huellaCarbono: "Ahorro estimado: 50 kg de CO₂ vs comprarlo nuevo.",
     imagen: require("../assets/images/Galaxy-A34.jpg"),
   },
   {
@@ -87,6 +92,7 @@ const productosCelulares = [
       "Pensado para durar el día completo con uso normal sin necesidad de recarga constante.",
     reacondicionamiento:
       "Equipo revisado, limpio y en muy buen estado general, con leves señales de uso.",
+    huellaCarbono: "Ahorro estimado: 40 kg de CO₂ vs comprarlo nuevo.",
     imagen: require("../assets/images/poco-m5.jpg"),
   },
 ];
@@ -227,9 +233,12 @@ export default function CelularesList() {
                   <p className="mb-1">
                     <strong>Duración de batería:</strong> {prod.bateria}
                   </p>
-                  <p className="mb-0">
+                  <p className="mb-1">
                     <strong>Reacondicionamiento:</strong>{" "}
                     {prod.reacondicionamiento}
+                  </p>
+                  <p className="mb-0 text-success">
+                    <strong>Huella de carbono:</strong> {prod.huellaCarbono}
                   </p>
                 </div>
 
