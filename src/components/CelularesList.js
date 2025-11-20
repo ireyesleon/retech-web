@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
+// Puedes cambiar el QR por otro PNG si quieres.
+// Este QR genérico funciona perfecto como mockup.
+const qrMock = "https://api.qrserver.com/v1/create-qr-code/?size=80x80&data=Historial";
+
 const productosCelulares = [
   {
     id: 1,
@@ -194,9 +198,7 @@ export default function CelularesList() {
           <div key={prod.id} className="col-md-4">
             <div
               className="card h-100 shadow-sm border-0"
-              style={{
-                transition: "transform 0.2s, box-shadow 0.2s",
-              }}
+              style={{ transition: "transform 0.2s, box-shadow 0.2s" }}
             >
               <div
                 className="position-relative"
@@ -226,6 +228,7 @@ export default function CelularesList() {
                 <h5 className="card-title mb-1">{prod.nombre}</h5>
                 <p className="mb-1 text-muted small">{prod.grado}</p>
 
+                {/* INFO */}
                 <div className="mb-3 small">
                   <p className="mb-1">
                     <strong>Desempeño:</strong> {prod.desempeno}
@@ -237,9 +240,25 @@ export default function CelularesList() {
                     <strong>Reacondicionamiento:</strong>{" "}
                     {prod.reacondicionamiento}
                   </p>
-                  <p className="mb-0 text-success">
+                  <p className="mb-2 text-success">
                     <strong>Huella de carbono:</strong> {prod.huellaCarbono}
                   </p>
+
+                  {/* QR MOCKUP */}
+                  <div className="text-center mt-2">
+                    <img
+                      src={qrMock}
+                      alt="Historial del dispositivo"
+                      style={{
+                        width: "70px",
+                        height: "70px",
+                        opacity: 0.9,
+                      }}
+                    />
+                    <p className="small text-muted mt-1">
+                      Escanea para ver historial
+                    </p>
+                  </div>
                 </div>
 
                 <p className="text-success fw-bold fs-5 mb-2">

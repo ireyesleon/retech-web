@@ -29,7 +29,6 @@ const About = () => {
         </div>
       </div>
 
-      
       {/* ========== CATEGORY CARDS ========== */}
       <div className="row g-4 mb-5 justify-content-center">
         {/* Celulares */}
@@ -44,9 +43,7 @@ const About = () => {
               <p className="text-muted small mb-1">
                 Para WhatsApp, redes y fotos.
               </p>
-              <p className="fw-bold text-success mb-0">
-                Desde $3,999 MXN
-              </p>
+              <p className="fw-bold text-success mb-0">Desde $3,999 MXN</p>
             </div>
           </Link>
         </div>
@@ -219,56 +216,75 @@ const About = () => {
                 </li>
               </ul>
 
-              <p className="text-muted small mb-0">
+              <p className="text-muted small mb-3">
                 Tu próxima compra puede ser más barata y más amigable con el
                 planeta.
               </p>
+
+              {/* Video de sustentabilidad */}
+              <div className="ratio ratio-16x9 rounded overflow-hidden shadow-sm">
+                <iframe
+                  src="https://www.youtube.com/embed/pJHRiXRhhlg"
+                  title="Sustentabilidad y tecnología"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                ></iframe>
+              </div>
             </div>
           </div>
         </div>
 
         {/* Product Exchange */}
-        <div className="col-12 col-md-6">
-          <div
-            className="card h-100 shadow-sm border-0 p-3"
-            style={{ backgroundColor: "#e9f2fb" }}
-          >
-            <div className="card-body">
-              <h4 className="fw-bold mb-3">🔄 Programa Product Exchange</h4>
+<div className="col-12 col-md-6">
+  <div
+    className="card h-100 shadow-sm border-0 p-3"
+    style={{ backgroundColor: "#e9f2fb" }}
+  >
+    <div className="card-body">
+      <h4 className="fw-bold mb-3">🔄 Programa Product Exchange</h4>
 
-              <p>
-                Trae tu celular, tablet o laptop usados y obtén un descuento en
-                tu próxima compra Retech. Nosotros lo reacondicionamos o lo
-                reciclamos correctamente.
-              </p>
+      <p>
+        Trae tu celular, tablet o laptop usados y obtén un descuento en
+        tu próxima compra Retech. Nosotros lo reacondicionamos o lo
+        reciclamos correctamente.
+      </p>
 
-              <ol className="text-start mb-3">
-                <li>Cuéntanos qué equipo quieres entregar y su estado.</li>
-                <li>Te damos una estimación de valor y tu posible descuento.</li>
-                <li>
-                  Entregas tu equipo y aplicas el descuento en tu nueva compra.
-                </li>
-              </ol>
+      <ol className="text-start mb-3">
+        <li>Cuéntanos qué equipo quieres entregar y su estado.</li>
+        <li>Te damos una estimación de valor y tu posible descuento.</li>
+        <li>
+          Entregas tu equipo y aplicas el descuento en tu nueva compra.
+        </li>
+      </ol>
 
-              <p className="text-muted small">
-                Mientras mejor estado tenga tu dispositivo, mayor puede ser tu
-                descuento.
-              </p>
+      <p className="text-muted small mb-3">
+        Mientras mejor estado tenga tu dispositivo, mayor puede ser tu
+        descuento.
+      </p>
 
-              <div className="d-flex flex-wrap gap-2">
-                <Link to="/product-exchange" className="btn btn-outline-success">
-                  Conoce el programa
-                </Link>
-                <Link
-                  to="/product-exchange/simula"
-                  className="btn btn-outline-secondary"
-                >
-                  Simula tu descuento
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
+      {/* Imagen exchange con mismo tamaño que el video */}
+      <div className="ratio ratio-16x9 rounded overflow-hidden shadow-sm mb-3">
+        <img
+          src={require("../assets/images/exchange.jpg")}
+          alt="Programa de intercambio Retech"
+          style={{ objectFit: "cover", width: "100%", height: "100%" }}
+        />
+      </div>
+
+      <div className="d-flex flex-wrap gap-2">
+        <Link to="/product-exchange" className="btn btn-outline-success">
+          Conoce el programa
+        </Link>
+        <Link
+          to="/product-exchange/simula"
+          className="btn btn-outline-secondary"
+        >
+          Simula tu descuento
+        </Link>
+      </div>
+    </div>
+  </div>
+</div>
       </div>
     </section>
   );
