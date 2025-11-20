@@ -1,107 +1,121 @@
-import React, { useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import bootstrap from 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
+import bootstrap from "bootstrap/dist/js/bootstrap.bundle.min.js";
 
 const About = () => {
-
   useEffect(() => {
-    const carouselElement = document.getElementById('dealsCarousel');
+    const carouselElement = document.getElementById("dealsCarousel");
     if (carouselElement) {
       new bootstrap.Carousel(carouselElement, {
         interval: 4000,
-        ride: 'carousel'
+        ride: "carousel",
       });
     }
   }, []);
 
   return (
     <section className="container py-5">
-      {/* ========== CATEGORY CARDS (NEW DESIGN) ========== */}
-<div className="row g-4 mb-5 justify-content-center">
-
-  {/* Celulares */}
-  <div className="col-10 col-md-3">
-    <Link
-      to="/deals/celulares"
-      className="text-decoration-none"
-    >
-      <div
-        className="card shadow-sm border-0 text-center p-4 h-100 category-card"
-        style={{ backgroundColor: "#f4fdf6" }}
-      >
-        <div className="fs-1 mb-2">📱</div>
-        <h5 className="fw-bold text-dark">Celulares</h5>
-        <p className="text-muted small mb-0">
-          Los mejores equipos reacondicionados.
-        </p>
+      {/* ========= HERO PRINCIPAL ========= */}
+      <div className="row justify-content-center mb-4">
+        <div className="col-12 col-lg-10 text-center">
+          <h1 className="fw-bold mb-2">
+            Estrena celular, laptop o tablet{" "}
+            <span className="text-success">sin endeudarte</span>
+          </h1>
+          <p className="lead mb-0">
+            Equipos reacondicionados listos para WhatsApp, Facebook, clases en
+            línea y trabajo, con garantía incluida.
+          </p>
+        </div>
       </div>
-    </Link>
-  </div>
 
-  {/* Laptops */}
-  <div className="col-10 col-md-3">
-    <Link
-      to="/deals/laptops"
-      className="text-decoration-none"
-    >
-      <div
-        className="card shadow-sm border-0 text-center p-4 h-100 category-card"
-        style={{ backgroundColor: "#f2f7ff" }}
-      >
-        <div className="fs-1 mb-2">💻</div>
-        <h5 className="fw-bold text-dark">Laptops</h5>
-        <p className="text-muted small mb-0">
-          Productividad, rendimiento y precio justo.
-        </p>
+      
+      {/* ========== CATEGORY CARDS ========== */}
+      <div className="row g-4 mb-5 justify-content-center">
+        {/* Celulares */}
+        <div className="col-10 col-md-3">
+          <Link to="/deals/celulares" className="text-decoration-none">
+            <div
+              className="card shadow-sm border-0 text-center p-4 h-100 category-card"
+              style={{ backgroundColor: "#f4fdf6" }}
+            >
+              <div className="fs-1 mb-2">📱</div>
+              <h5 className="fw-bold text-dark">Celulares</h5>
+              <p className="text-muted small mb-1">
+                Para WhatsApp, redes y fotos.
+              </p>
+              <p className="fw-bold text-success mb-0">
+                Desde $3,999 MXN
+              </p>
+            </div>
+          </Link>
+        </div>
+
+        {/* Laptops */}
+        <div className="col-10 col-md-3">
+          <Link to="/deals/laptops" className="text-decoration-none">
+            <div
+              className="card shadow-sm border-0 text-center p-4 h-100 category-card"
+              style={{ backgroundColor: "#f2f7ff" }}
+            >
+              <div className="fs-1 mb-2">💻</div>
+              <h5 className="fw-bold text-dark">Laptops</h5>
+              <p className="text-muted small mb-1">
+                Para tareas, trabajo y clases en línea.
+              </p>
+              <p className="fw-bold text-success mb-0">
+                Mucho más baratas que nuevas.
+              </p>
+            </div>
+          </Link>
+        </div>
+
+        {/* Tablets */}
+        <div className="col-10 col-md-3">
+          <Link to="/deals/tablets" className="text-decoration-none">
+            <div
+              className="card shadow-sm border-0 text-center p-4 h-100 category-card"
+              style={{ backgroundColor: "#fff8f2" }}
+            >
+              <div className="fs-1 mb-2">📟</div>
+              <h5 className="fw-bold text-dark">Tablets</h5>
+              <p className="text-muted small mb-1">
+                Para niños, estudiar y ver series.
+              </p>
+              <p className="fw-bold text-success mb-0">
+                Opciones para todos los presupuestos.
+              </p>
+            </div>
+          </Link>
+        </div>
+
+        {/* Botón general ofertas */}
+        <div className="col-12 text-center mt-3">
+          <Link
+            to="/deals"
+            className="btn btn-success btn-lg col-12 col-sm-6 col-md-4"
+          >
+            Ver todas las ofertas
+          </Link>
+        </div>
       </div>
-    </Link>
-  </div>
-
-  {/* Tablets */}
-  <div className="col-10 col-md-3">
-    <Link
-      to="/deals/tablets"
-      className="text-decoration-none"
-    >
-      <div
-        className="card shadow-sm border-0 text-center p-4 h-100 category-card"
-        style={{ backgroundColor: "#fff8f2" }}
-      >
-        <div className="fs-1 mb-2">📟</div>
-        <h5 className="fw-bold text-dark">Tablets</h5>
-        <p className="text-muted small mb-0">
-          Portabilidad y desempeño para todos.
-        </p>
-      </div>
-    </Link>
-    
-  </div>
-  <Link to="/deals" className="btn btn-success btn-lg mt-3 col-12 col-sm-2 col-md-6 col-lg-4">
-          Ver todas las ofertas
-        </Link>
-</div>
-
 
       {/* ================= IMAGES ROW (TOP) ================= */}
       <div className="row justify-content-center mb-4">
         <div className="col-12 col-md-8">
-          <div
-            id="dealsCarousel"
-            className="carousel slide rounded shadow"
-          >
+          <div id="dealsCarousel" className="carousel slide rounded shadow">
             <div className="carousel-inner">
-
               {/* Deal 1 */}
               <div className="carousel-item active">
                 <img
                   className="d-block w-100"
-                  src={require('../assets/images/iphone-deal.jpg')}
+                  src={require("../assets/images/iphone-deal.jpg")}
                   alt="iPhone Deal"
                   style={{ maxHeight: "55vh", objectFit: "cover" }}
                 />
                 <div className="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-2">
-                  <h5>iPhone 17 – Reacondicionado Premium</h5>
-                  <p>Hasta 35% de descuento</p>
+                  <h5>Ahorra en tu próximo iPhone reacondicionado</h5>
+                  <p>Hasta 35% más barato que uno nuevo.</p>
                 </div>
               </div>
 
@@ -109,13 +123,13 @@ const About = () => {
               <div className="carousel-item">
                 <img
                   className="d-block w-100"
-                  src={require('../assets/images/macbook-deal.jpg')}
+                  src={require("../assets/images/macbook-deal.jpg")}
                   alt="MacBook Deal"
                   style={{ maxHeight: "55vh", objectFit: "cover" }}
                 />
                 <div className="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-2">
-                  <h5>HP EliteBook 840 G6 – Reacondicionado</h5>
-                  <p>Ahorra hasta $4,000 MXN</p>
+                  <h5>Laptops para trabajo y estudio</h5>
+                  <p>Ahorra hasta $4,000 MXN en equipo reacondicionado.</p>
                 </div>
               </div>
 
@@ -123,12 +137,15 @@ const About = () => {
               <div className="carousel-item">
                 <img
                   className="d-block w-100"
-                  src={require('../assets/images/ipad-deal.jpg')}
+                  src={require("../assets/images/ipad-deal.jpg")}
                   alt="iPad Deal"
                   style={{ maxHeight: "55vh", objectFit: "cover" }}
                 />
+                <div className="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-2">
+                  <h5>Tablets para la escuela y entretenimiento</h5>
+                  <p>Ideal para niños y clases en línea.</p>
+                </div>
               </div>
-
             </div>
 
             {/* Controls */}
@@ -156,89 +173,103 @@ const About = () => {
 
       {/* ================= TEXT SECTION (BOTTOM) ================= */}
       <div className="text-center px-3 mb-5">
-        <h3 className="fw-bold mb-3">Ofertas que no puedes dejar pasar</h3>
+        <h3 className="fw-bold mb-3">Calidad que se nota, precio que sí alcanza</h3>
 
         <p>
-          En Retech seleccionamos los mejores dispositivos reacondicionados y te los ofrecemos 
-          a precios increíbles. Smartphones, laptops y tablets con garantía y calidad certificada.
+          En Retech revisamos cada celular, laptop y tablet para que funcione
+          bien en tu día a día: redes sociales, llamadas, videoclases y trabajo.
         </p>
 
         <p>
-          Cada equipo pasa por un proceso de prueba de más de 20 puntos para asegurar el máximo rendimiento.  
-          Calidad premium, precio justo.
+          Si algo no sale como esperabas, cuentas con garantía y atención para
+          ayudarte a resolverlo. Que sea reacondicionado no significa que sea
+          complicado: lo recibes listo para usar.
         </p>
       </div>
 
       {/* ================= SUSTENTABILIDAD & PRODUCT EXCHANGE ================= */}
-<div className="row g-4 align-items-stretch">
+      <div className="row g-4 align-items-stretch">
+        {/* Sostenibilidad */}
+        <div className="col-12 col-md-6">
+          <div
+            className="card h-100 shadow-sm border-0 p-3"
+            style={{ backgroundColor: "#e9f7ef" }}
+          >
+            <div className="card-body">
+              <h4 className="fw-bold mb-3">
+                🌱 Cuida tu bolsillo y también al planeta
+              </h4>
 
-  {/* Sostenibilidad */}
-  <div className="col-12 col-md-6">
-    <div
-      className="card h-100 shadow-sm border-0 p-3"
-      style={{ backgroundColor: "#e9f7ef" }} // verde suave
-    >
-      <div className="card-body">
-        <h4 className="fw-bold mb-3">🌱 Tecnología más responsable con el planeta</h4>
+              <p>
+                Cuando eliges un equipo reacondicionado, ayudas a que menos
+                dispositivos terminen en la basura y se usen mejor los recursos.
+              </p>
 
-        <p>
-          Cada dispositivo reacondicionado que eliges evita que un equipo más
-          termine como residuo electrónico y reduce la demanda de nuevas materias
-          primas, agua y energía.
-        </p>
+              <ul className="text-start mb-3">
+                <li>
+                  Disminuimos residuos electrónicos al alargar la vida de cada
+                  equipo.
+                </li>
+                <li>
+                  Reutilizamos piezas en buen estado y reciclamos el resto de
+                  forma responsable.
+                </li>
+                <li>
+                  Reducimos la necesidad de fabricar tantos equipos nuevos.
+                </li>
+              </ul>
 
-        <ul className="text-start mb-3">
-          <li>Disminuimos la huella de carbono extendiendo la vida útil de cada equipo.</li>
-          <li>Reducimos residuos electrónicos dándole una segunda vida a la tecnología.</li>
-          <li>Reutilizamos componentes en buen estado y reciclamos el resto de forma responsable.</li>
-        </ul>
+              <p className="text-muted small mb-0">
+                Tu próxima compra puede ser más barata y más amigable con el
+                planeta.
+              </p>
+            </div>
+          </div>
+        </div>
 
-        <p className="text-muted small mb-0">
-          Tu compra no solo cuida tu bolsillo, también cuida el planeta.
-          Pequeñas decisiones, gran impacto.
-        </p>
-      </div>
-    </div>
-  </div>
+        {/* Product Exchange */}
+        <div className="col-12 col-md-6">
+          <div
+            className="card h-100 shadow-sm border-0 p-3"
+            style={{ backgroundColor: "#e9f2fb" }}
+          >
+            <div className="card-body">
+              <h4 className="fw-bold mb-3">🔄 Programa Product Exchange</h4>
 
-  {/* Product Exchange */}
-  <div className="col-12 col-md-6">
-    <div
-      className="card h-100 shadow-sm border-0 p-3"
-      style={{ backgroundColor: "#e9f2fb" }} // azul suave
-    >
-      <div className="card-body">
-        <h4 className="fw-bold mb-3">🔄 Programa Product Exchange</h4>
+              <p>
+                Trae tu celular, tablet o laptop usados y obtén un descuento en
+                tu próxima compra Retech. Nosotros lo reacondicionamos o lo
+                reciclamos correctamente.
+              </p>
 
-        <p>
-          Trae tu celular, tablet o laptop usados y obtén un descuento en tu próxima compra Retech.
-          Nosotros nos encargamos de reacondicionarlos o reciclarlos correctamente.
-        </p>
+              <ol className="text-start mb-3">
+                <li>Cuéntanos qué equipo quieres entregar y su estado.</li>
+                <li>Te damos una estimación de valor y tu posible descuento.</li>
+                <li>
+                  Entregas tu equipo y aplicas el descuento en tu nueva compra.
+                </li>
+              </ol>
 
-        <ol className="text-start mb-3">
-          <li>Cuéntanos qué equipo quieres entregar y su estado general.</li>
-          <li>Te damos una estimación de valor y el descuento que puedes obtener.</li>
-          <li>Entregas tu equipo en tienda o por paquetería y aplicas tu descuento en la compra.</li>
-        </ol>
+              <p className="text-muted small">
+                Mientras mejor estado tenga tu dispositivo, mayor puede ser tu
+                descuento.
+              </p>
 
-        <p className="text-muted small">
-          Mientras mejor estado tenga tu dispositivo, mayor puede ser tu descuento.
-        </p>
-
-        <div className="d-flex flex-wrap gap-2">
-          <Link to="/product-exchange" className="btn btn-outline-success">
-            Conoce el programa
-          </Link>
-          <Link to="/product-exchange/simula" className="btn btn-outline-secondary">
-            Simula tu descuento
-          </Link>
+              <div className="d-flex flex-wrap gap-2">
+                <Link to="/product-exchange" className="btn btn-outline-success">
+                  Conoce el programa
+                </Link>
+                <Link
+                  to="/product-exchange/simula"
+                  className="btn btn-outline-secondary"
+                >
+                  Simula tu descuento
+                </Link>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-
-</div>
-
     </section>
   );
 };
