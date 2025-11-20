@@ -176,22 +176,36 @@ export default function Tablets() {
                 <p className="mb-1 text-muted small">{prod.grado}</p>
 
                 <div className="mb-3 small">
-                  <p className="mb-1">
-                    <strong>Desempeño:</strong> {prod.desempeno}
-                  </p>
-                  <p className="mb-1">
-                    <strong>Duración de batería:</strong> {prod.bateria}
-                  </p>
-                  <p className="mb-1">
-                    <strong>Reacondicionamiento:</strong>{" "}
-                    {prod.reacondicionamiento}
-                  </p>
+  <p className="mb-1">
+    <strong>Desempeño:</strong> {prod.desempeno}
+  </p>
+  <p className="mb-1">
+    <strong>Duración de batería:</strong> {prod.bateria}
+  </p>
+  <p className="mb-1">
+    <strong>Reacondicionamiento:</strong>{" "}
+    {prod.reacondicionamiento}
+  </p>
+  <p className="mb-2 text-success">
+    <strong>Huella de carbono:</strong> {prod.huellaCarbono}
+  </p>
 
-                  {/* HUELLA DE CARBONO 🌱 */}
-                  <p className="mb-0 text-success">
-                    <strong>Huella de carbono:</strong> {prod.huellaCarbono}
-                  </p>
-                </div>
+  {/* QR */}
+  <div className="text-center mt-2">
+    <img
+      src="https://api.qrserver.com/v1/create-qr-code/?size=80x80&data=Historial"
+      alt="Historial del dispositivo"
+      style={{
+        width: "70px",
+        height: "70px",
+        opacity: 0.9,
+      }}
+    />
+    <p className="small text-muted mt-1">
+      Escanea para ver historial
+    </p>
+  </div>
+</div>
 
                 <p className="text-success fw-bold fs-5 mb-2">
                   ${prod.precio.toLocaleString("es-MX")}
