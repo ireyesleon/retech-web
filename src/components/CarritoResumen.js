@@ -12,6 +12,14 @@ export default function CarritoResumen({ carrito, onClose }) {
 
   const total = subtotal + costoGarantia;
 
+  // Extraer número de kg de CO2 desde el texto de huellaCarbono, si existe
+  const totalCO2 = carrito.reduce((acc, item) => {
+    if (!item.huellaCarbono) return acc;
+    const match = item.huellaCarbono.match(/(\d+(\.\d+)?)/); // primer número en el texto
+    const kg = match ? parseFloat(match[1]) : 0;
+    return acc + kg;
+  }, 0);
+
   if (carrito.length === 0) {
     return (
       <div className="card shadow-sm border-0 mt-4">
@@ -61,6 +69,11 @@ export default function CarritoResumen({ carrito, onClose }) {
                 <div>
                   <h6 className="mb-1">{item.nombre}</h6>
                   <p className="mb-0 text-muted small">{item.marca}</p>
+                  {item.huellaCarbono && (
+                    <p className="mb-0 text-success small">
+                      🌱 {item.huellaCarbono}
+                    </p>
+                  )}
                 </div>
               </div>
               <div className="fw-bold text-success">
@@ -118,6 +131,20 @@ export default function CarritoResumen({ carrito, onClose }) {
             </label>
           </div>
         </div>
+
+        {/* Impacto ambiental */}
+        {totalCO2 > 0 && (
+          <div className="border-top pt-3 mt-3 mb-3">
+            <h6 className="fw-bold mb-2">🌱 Impacto ambiental de tu compra</h6>
+            <p className="mb-1 small text-muted">
+              Al elegir equipos reacondicionados en lugar de nuevos, ayudas a reducir
+              la huella de carbono y los residuos electrónicos.
+            </p>
+            <p className="mb-0 text-success fw-bold">
+              Ahorro estimado: {totalCO2.toLocaleString("es-MX")} kg de CO₂.
+            </p>
+          </div>
+        )}
 
         {/* Resumen de pago */}
         <div className="border-top pt-3">

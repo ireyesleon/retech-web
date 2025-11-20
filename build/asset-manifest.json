@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/retech-web/static/css/main.38e21a97.css",
-    "main.js": "/retech-web/static/js/main.c8a5dbf6.js",
+    "main.js": "/retech-web/static/js/main.9ec0c37a.js",
     "static/media/HP EliteBook 840 G6.jpg": "/retech-web/static/media/HP EliteBook 840 G6.25439e1fde5513baa1b0.jpg",
     "static/media/bootstrap-icons.woff?": "/retech-web/static/media/bootstrap-icons.1295669cd4e305c97f2c.woff",
     "static/media/Galaxy Tab S6 Lite.jpg": "/retech-web/static/media/Galaxy Tab S6 Lite.bf84564fe551246a30e1.jpg",
@@ -22,10 +22,10 @@
     "static/media/Galaxy-A34.jpg": "/retech-web/static/media/Galaxy-A34.513aa964df2f7f2fd534.jpg",
     "index.html": "/retech-web/index.html",
     "main.38e21a97.css.map": "/retech-web/static/css/main.38e21a97.css.map",
-    "main.c8a5dbf6.js.map": "/retech-web/static/js/main.c8a5dbf6.js.map"
+    "main.9ec0c37a.js.map": "/retech-web/static/js/main.9ec0c37a.js.map"
   },
   "entrypoints": [
     "static/css/main.38e21a97.css",
-    "static/js/main.c8a5dbf6.js"
+    "static/js/main.9ec0c37a.js"
   ]
 }
